@@ -1,22 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>我的秘密基地</title>
     <style>
-    body {
-        background-color: #001f3f; /* 深蓝色 */
-        color: white;             /* 白色字 */
-        text-align: center;       /* 文字居中 */
-        font-family: "Microsoft YaHei", sans-serif;
-        padding-top: 50px;
-    }
-</style>
+        body {
+            background-color: #001f3f; /* 深蓝色 */
+            color: white;
+            text-align: center;
+            font-family: "Microsoft YaHei", sans-serif;
+            padding-top: 50px;
+            transition: background-color 0.5s; /* 让背景变色时有平滑过渡 */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #ff851b; /* 橘色按钮 */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #ff4136; /* 鼠标放上去变红色 */
+        }
+    </style>
 </head>
 <body>
-    <h1>幸得识卿桃花面 从此阡陌多暖春！</h1>
-    <img src="https://placekitten.com/400/300" alt="小猫" style="border-radius: 15px; margin-top: 20px;">
-<p>这是我亲手写的第一行代码，感觉不错。</p>
+
+    <h1>🚀 欢迎来到 [你的名字] 的秘密基地</h1>
+    <p>这是我亲手发布的第一个联网网页！</p>
+
+    <img src="https://placekitten.com/400/300" alt="小猫" style="border-radius: 15px;">
+
+    <br>
+    <button onclick="changeColor()">点击施展变色魔法</button>
+
+    <script>
+        // 这就是 JavaScript，负责网页的“动作”
+        function changeColor() {
+            const colors = ['#001f3f', '#3D9970', '#B10DC9', '#FF4136', '#01FF70'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+
 </body>
 </html>
